@@ -1,0 +1,88 @@
+<ion-view  hide-back-button="true" >
+<ion-nav-title style="font-size: 15px;
+font-style: normal;">
+     Address
+     </ion-nav-title>
+
+ <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+ <form  >
+  <div class="list list-inset">
+      
+      <label class="item item-input item-stacked-label">
+            <span>Name*</span>
+
+        </label>
+
+<input type="text" ng-model="addressdetails.name"   style="border-radius: 0;
+width: 100%;
+height: 30px;
+padding: 3px 10px;
+border: 1px solid #ccc; margin-top: -10px;margin-bottom: 7px;"  >
+ <label class="item item-input item-stacked-label">
+            <span>Email-id*</span>
+
+        </label>
+
+<input type="text" ng-model="addressdetails.email"  style="border-radius: 0;
+width: 100%;
+height: 30px;
+padding: 3px 10px;
+border: 1px solid #ccc; margin-top: -10px;margin-bottom: 7px;"  >
+      <label class="item item-input item-stacked-label">
+            <span> City* </span>
+
+        </label>
+    
+             <select class="form-control"  ng-model="addressdetails.city"  ng-options="item.City as item.City for item in usercity">
+              <option style="display:none" value="">Select City</option>
+        </select>
+       <!--   <select class="form-control" ng-change="GetRange()" ng-focus="rmEleId('period')" ng-model="report.Period" ng-options="item.key as item.Period for item in Period">
+        </select> -->
+         
+        
+ <label class="item item-input item-stacked-label">
+            <span> Address*</span>
+
+        </label>
+<textarea  ng-model="addressdetails.address" rows="4" style="border-radius: 0;
+width: 100%;
+height: 58px;
+padding: 3px 10px;
+border: 1px solid #ccc;margin-top: -10px;margin-bottom: 7px;">
+
+</textarea>
+ <label class="item item-input item-stacked-label">
+            <span> Pincode*</span>
+
+        </label>
+
+<input type="text" ng-model="addressdetails.pincode" ng-blur="getarea(addressdetails.pincode);"  style="border-radius: 0;
+width: 100%;
+height: 30px;
+padding: 3px 10px;
+border: 1px solid #ccc; margin-top: -10px;margin-bottom: 7px;"  >
+    <label class="item item-input item-stacked-label">
+            <span> Area*</span>
+
+        </label>
+         <select class="form-control"  ng-model="addressdetails.area"   ng-options="item.Area as item.Area for item in userarea">
+       <!--    <option style="display:none" value="">Select Area</option> -->
+        </select>
+
+<center>
+   <div class="item " style="border-style:none !important ">
+   
+   <!-- adduseraddress -->
+<button type="button" ng-click="adduseraddress();" style="background-color: #3a920de6 !important;
+width: 100px;" class="button button-small button-positive" >Payment </button>
+</center>
+        
+</form>
+
+
+  </ion-content>
+</ion-view>

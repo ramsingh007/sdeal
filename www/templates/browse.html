@@ -1,0 +1,154 @@
+<ion-view >
+ <ion-nav-title style="font-size: 15px;
+font-style: normal;">
+       AC Services
+     </ion-nav-title>
+<div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item active" id="tab1"  ng-click="divshow('pr','tab1');">
+    <!--     <i class="icon ion-home"></i> -->
+       REPAIR
+      </a>
+      <a class="tab-item "  id="tab2" ng-click="divshow('si','tab2');">
+     <!--    <i class="icon ion-star"></i> -->
+        SERVICE
+      </a>
+      <a class="tab-item "  id="tab3" ng-click="divshow('th','tab3');">
+        <!-- <i class="icon ion-gear-a"></i> -->
+        INSTALLATION
+      </a>
+    </div>
+  </div> <div class="tabs-striped tabs-color-assertive">
+    <div class="tabs">
+    <div class="button-bar">
+  <a class="button" style="background-color: #4d4545;
+color: white;
+border-radius: 0px 0px 0px 0px !important;top: -11px;font-family: ramfont;" ng-click="addtocart();"   >ADD TO CART<br></a>
+  <a class="button button-balanced" style="
+border-radius: 0px 0px 0px 0px !important;top: -11px;font-family: ramfont;"  ng-click="prepareorder();" >ORDER NOW</a>
+
+</div>
+    </div>
+    <p></p><br>
+  </div>
+  <ion-content>
+  <br> 
+
+<div id="pr" ng-show="pr" class="list">
+
+<form  >
+  <div class="list list-inset">
+      
+     
+      <label class="item item-input item-stacked-label">
+            <span>Select Type* </span>
+
+        </label>
+         <select class="form-control" ng-model="order.type" >
+                    <option style="display:none" value="">Select Type</option>
+
+ <option value="Inspection">Inspection</option>
+      <option value="Water DRiping issue">Water DRiping issue</option>
+      <option value="Gas Charging (upto 1 Ton)">Gas Charging (upto 1 Ton)</option>
+       <option value="Gas Charging (upto 1.9 Ton)">Gas Charging (upto 1.9 Ton)</option>
+       <option value="Gas Charging (upto 2.5 Ton)">Gas Charging (upto 2.5 Ton)</option>
+            </select>
+         
+          <label class="item item-input item-stacked-label">
+            <span>Frequency* </span>
+
+        </label>
+         <select class="form-control" ng-model="order.frequency" >
+          <option style="display:none" value="">Select Frequency</option>
+  <option value="One Time">One Time</option>
+    <option value="Quarterly">Quarterly</option>
+            </select>
+ <div  class="row" style="padding: 0px !important;  padding-bottom: 6px !important; ">
+          <div class="col" style="padding: 0px !important;padding-right: 11px !important; "> <label class="item item-input item-stacked-label">
+            <span> Quantity*</span>
+
+        </label>
+      <!--    <select class="form-control" ng-model="order.quantity" ng-change="pricecalculate()"  >
+                
+     <option >1</option>
+      <option >2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+         </select> -->
+
+  <select class="form-control"  ng-model="order.quantity" ng-change="pricecalculate()"   ng-options="c for c in organizations"></select>
+
+
+
+       </div>
+          <div class="col " style="padding: 0px !important;  "> <label class="item item-input item-stacked-label">
+            <span>Cost* </span>
+<!-- {{qant*cost}} -->
+        </label>
+         <input type="text"  ng-model="order.cost"  style="border-radius: 0;
+width: 100%;
+height: 30px;
+padding: 3px 10px;
+border: 1px solid #ccc;"   readonly>
+         </div>
+        </div>
+        <div  class="row" style="padding: 0px !important;  ">
+          <div class="col" style="padding: 0px !important;padding-right: 11px !important; "> <label class="item item-input item-stacked-label">
+            <span>Date* </span>
+
+        </label><input type="date"  ng-model="order.date"   style="border-radius: 0;
+width: 100%;
+height: 30px;
+padding: 3px 10px;
+border: 1px solid #ccc;"  >
+         </div>
+          <div class="col " style="padding: 0px !important;  "> <label class="item item-input item-stacked-label">
+            <span>Time* </span>
+
+        </label>
+         <select class="form-control"  ng-model="order.time" >
+           <option style="display:none" value="">Select Time</option>
+<option value="10-12 AM"  >  10-12 AM </option>
+      <option  value="12-04 PM"> 12-04 PM </option>
+      <option value="04-08 PM"> 04-08 PM</option>
+         </select></div>
+        </div>
+      <label class="item item-input item-stacked-label" ng-class="{'erClass':eleId === 'address'}" id="address"  >
+            <span>Comment</span>
+          
+<textarea  ng-model="order.comment" rows="4" style="border-radius: 0;
+width: 100%;
+height: 58px;
+padding: 3px 10px;
+border: 1px solid #ccc;">
+
+</textarea>
+        </label>
+    
+
+<!-- <center>
+   <div class="item " style="border-style:none !important ">
+<button type="button" ng-click="orderss();" style="background-color: #3a920de6 !important;
+width: 100px;" class="button button-small button-positive" >Order Now</button>
+</center> -->
+        
+
+</form>
+
+
+  
+</div>
+<div  id="si" ng-show="si" class="list">
+  
+</div>
+
+<div  id="si" ng-show="th" class="list">
+ 
+</div>
+
+  </ion-content>
+ <!--  <div class="bar bar-footer" style="background-color:red">
+  <button class="button button-clear pull-right" >Right</button>
+</div> -->
+</ion-view>

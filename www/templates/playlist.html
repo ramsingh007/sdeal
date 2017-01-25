@@ -1,0 +1,35 @@
+<ion-view hide-back-button="true" >
+ <ion-nav-title style="font-size: 15px;
+font-style: normal;">
+       OTP
+     </ion-nav-title>
+ <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+   <div class="card"  style="border-left: 10px solid #2c3240;">
+     <div class="item item-text-wrap" style="font-size: 12px; !important ;font-family: ramfont;
+color: #666262e6; ">
+Please enter the One Time Password(OTP) that was send to your phone number 
+  </div>
+   </div>
+     <div class="card"  >
+   
+  <label class="item item-input" style="border-style: none !important">
+
+  <input type="number"  ng-model="user.enterotp" placeholder="Enter OTP">
+  </label>
+  <br>
+
+
+<center>
+   <div class="item " style="border-style:none !important ">
+<button type="button" ng-click="checkotp();" style="background-color: #3a920de6 !important;
+width: 100px;" class="button button-small button-positive" >VERIFY</button>
+</center>
+  <br>
+
+</div>
+  </ion-content>
+</ion-view>

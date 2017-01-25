@@ -1,0 +1,57 @@
+<ion-view >
+<ion-nav-title style="font-size: 15px;
+font-style: normal;">
+       My Orders
+     </ion-nav-title>
+<!-- <div class="bar bar-subheader">
+
+</div> -->
+
+  <ion-content style="background-color: #f9f7f7;">
+ 
+
+<div class="card" ng-repeat="myorder in GetOrderStatusResult ">
+   <!-- <a class="item item-avatar" href="#"> -->
+      <div class="item item-divider" style="background-color: #d1cfcf;">
+  
+{{myorder.ORDER_NO}}
+<span style="margin-top: -4px;margin-right: -25px;" class="badge badge-assertive">{{myorder.STATUS}}</span>
+  </div>
+   <div class="row">
+
+  <div class="col myordercolor">Type</div>
+  <div class="col myordercolorcontent">{{myorder.TYPE}}</div>
+  <div class="col myordercolor"> Frequency</div>
+  <div class="col myordercolorcontent">{{myorder.FREQUENCY}}</div>
+</div>
+ <div class="row">
+
+  <div class="col myordercolor">Quantity</div>
+  <div class="col myordercolorcontent">{{myorder.QUANTITY}}</div>
+  <div class="col myordercolor">Cost</div>
+  <div class="col myordercolorcontent">{{myorder.TOTAL}}</div>
+</div>
+ <div class="row">
+
+  <div class="col myordercolor">Date</div>
+  <div class="col myordercolorcontent">{{myorder.DATE}}</div>
+  <div class="col myordercolor">Time</div>
+  <div class="col myordercolorcontent">{{myorder.SERVICE_TIME}}</div>
+</div>
+
+
+    <div class="row">
+
+  <div class="col " style="background-color:red"><center style="
+    color: white;
+    font-weight: bold;">Cancel Order</center></div>
+</div>
+  </div>
+</div><!-- <div class="card">
+  <div class="item item-text-wrap">
+    This is a basic Card which contains an item that has wrapping text.
+  </div>
+</div> -->
+
+  </ion-content>
+</ion-view>

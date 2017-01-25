@@ -1,0 +1,118 @@
+<ion-view >
+<ion-nav-title style="font-size: 15px;
+font-style: normal;">
+       Order Summary
+     </ion-nav-title>
+<!-- <div class="bar bar-subheader">
+
+</div> -->
+<div class="tabs-striped tabs-color-assertive">
+    <div class="tabs">
+    <div class="button-bar">
+  <a class="button" style="background-color: #2c3240;
+color: white;
+border-radius: 0px 0px 0px 0px !important;top: -11px;font-family: ramfont;"  ng-click="paymentmethod()"   >PAY NOW<br></a>
+
+
+</div>
+    </div>
+   
+  </div>
+
+  <ion-content>
+  <div class="card bggggg"  >
+<div class="item item-divider" style="background: #2c3240;color: white;">
+   Address 
+  </div>
+   <div class="row customrow">
+
+  <div class="col myordercolor">Name </div>
+  <div class="col col-75 myordercolorcontent">{{addressdetailssummary.Name}}</div>
+  
+</div>  
+<div class="row customrow">
+
+ 
+  <div class="col myordercolor">Mobile</div>
+  <div class="col col-75 myordercolorcontent">{{addressdetailssummary.Mobile}}</div>
+</div>
+<div class="row customrow">
+
+ 
+<div class="col myordercolor">Email</div>
+  <div class="col col-75 myordercolorcontent">{{addressdetailssummary.Email}}</div>
+</div><div class="row customrow">
+
+ 
+ <div class="col myordercolor">City</div>
+  <div class="col col-75 myordercolorcontent">{{addressdetailssummary.City}}</div>
+</div><div class="row customrow">
+
+ 
+ <div class="col myordercolor">Address</div>
+  <div class="col col-75 myordercolorcontent">{{addressdetailssummary.Address}}</div>
+</div><div class="row customrow">
+
+ 
+   <div class="col myordercolor">Pincode</div>
+  <div class="col col-75 myordercolorcontent">{{addressdetailssummary.Pincode}}</div>
+</div>
+<div class="row customrow">
+
+ 
+   <div class="col myordercolor">Area</div>
+  <div class="col col-75 myordercolorcontent">{{addressdetailssummary.Area}}</div>
+</div>
+
+  </div>
+</div>
+
+<div class="card bggggg"  >
+<div class="item item-divider" style="background: #2c3240;color: white;">
+  Order Details
+  </div>
+
+  <div ng-repeat="ordersss in sendorderdetailssutuyuy" >
+   <div class="row customrow">
+
+  <div class="col myordercolor">Type </div>
+  <div class="col col-75 myordercolorcontent">{{ordersss.Type}}</div>
+  
+</div>  
+<div class="row customrow">
+
+ 
+  <div class="col myordercolor"> Frequency</div>
+  <div class="col col-75 myordercolorcontent">{{ordersss.FREEQUENCY}}</div>
+</div>
+<div class="row customrow">
+
+ 
+<div class="col myordercolor">Quantity</div>
+  <div class="col col-75 myordercolorcontent">{{ordersss.Quantity}}</div>
+</div><div class="row customrow">
+
+ 
+ <div class="col myordercolor">Cost</div>
+  <div class="col col-75 myordercolorcontent">{{ordersss.Total_cost}}</div>
+</div><div class="row customrow">
+
+ 
+ <div class="col myordercolor">Date</div>
+  <div class="col col-75 myordercolorcontent">{{ordersss.FREEQUENCY}}</div>
+</div><div class="row customrow">
+
+ 
+   <div class="col myordercolor">Time</div>
+  <div class="col col-75 myordercolorcontent">{{ordersss.Time}}  </div>
+</div>
+ </div>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+  </ion-content>
+</ion-view>
